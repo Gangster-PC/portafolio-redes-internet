@@ -18,3 +18,61 @@ body{font-size:16px}
 .notes-group h2{font-size:12px}
 footer{font-size:14px}
 footer span{font-size:12px}
+
+/* Botón Metaverso */
+.metaverso-btn {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  z-index: 15;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(14, 18, 38, 0.85);
+  border: 1px solid rgba(0, 212, 255, 0.5);
+  color: var(--cyan);
+  font-family: var(--orbit);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.metaverso-btn::before {
+  content: "✦";
+  font-size: 11px;
+  color: var(--cyan);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.metaverso-btn:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.25), rgba(180, 79, 255, 0.35));
+  border-color: var(--purple);
+  color: #fff;
+  box-shadow: 0 0 25px rgba(180, 79, 255, 0.5), 0 0 15px rgba(0, 212, 255, 0.4);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.metaverso-btn:hover::before {
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.metaverso-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+@media (max-width: 700px) {
+  .metaverso-btn {
+    position: static;
+    align-self: flex-end;
+    margin-bottom: -15px;
+    font-size: 11px;
+    padding: 7px 14px;
+  }
+}
